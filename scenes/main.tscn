@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=3 uid="uid://vhe708tlxv73"]
+
+[ext_resource type="FontFile" uid="uid://c0nhdyu6yyskr" path="res://kenvector_future_thin.ttf" id="1_6haqg"]
+[ext_resource type="Texture2D" uid="uid://dll8a6v04nojv" path="res://Player/Idle.png" id="2_hvm15"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="2_pm1hh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42pf8"]
+size = Vector2(8, 14)
+
+[node name="Main" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinsLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -136.0
+offset_top = 45.0
+offset_right = 131.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_6haqg")
+theme_override_font_sizes/font_size = 60
+text = "Coins: 0"
+
+[node name="LevelLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -148.0
+offset_top = 124.0
+offset_right = 126.0
+offset_bottom = 192.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_6haqg")
+theme_override_font_sizes/font_size = 60
+text = "Level: 1"
+
+[node name="UpButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -175.0
+offset_right = 24.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DownButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -85.0
+offset_right = 24.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LeftButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -85.0
+offset_right = -63.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RightButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -85.0
+offset_right = 115.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2(270, 480)
+scale = Vector2(3, 3)
+script = ExtResource("2_pm1hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture_filter = 1
+texture = ExtResource("2_hvm15")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_42pf8")
+
+[connection signal="button_down" from="UI/UpButton" to="Player" method="_on_up_button_button_down"]
+[connection signal="button_up" from="UI/UpButton" to="Player" method="_on_up_button_button_up"]
+[connection signal="button_down" from="UI/DownButton" to="Player" method="_on_down_button_button_down"]
+[connection signal="button_up" from="UI/DownButton" to="Player" method="_on_down_button_button_up"]
+[connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_left_button_button_down"]
+[connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_left_button_button_up"]
+[connection signal="button_down" from="UI/RightButton" to="Player" method="_on_right_button_button_down"]
+[connection signal="button_up" from="UI/RightButton" to="Player" method="_on_right_button_button_up"]

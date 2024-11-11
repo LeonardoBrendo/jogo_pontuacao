@@ -1,0 +1,5 @@
+Na cena  main -> 
+	UI : para cada butão criado, deve-se adicionar os sinais button_down e button_up (gerando 8 butões)
+	Player: Transform: scale -> y:3  e x:3. Crie um script para player, após ter criado os n ós dentro de player. Cada 	botão DownButton conecta com o sinal button_down(), dentro de node (canto superior direito)
+		CollisionShape2D:
+		Sprite2D: Texture -> filter : Nearest, Animation -> Hframes: 4

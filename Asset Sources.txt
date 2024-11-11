@@ -1,0 +1,7 @@
+Player: I made those assets myself for my game World Cup Collector (https://play.google.com/store/apps/details?id=com.LettaCorporation.WorldCupCollector&hl=en&gl=US)
+
+Coin: https://kenney.nl/assets/puzzle-pack-2
+
+Font: https://kenney.nl/assets/ui-pack
+
+Heart: https://kenney.nl/assets/pixel-platformer
