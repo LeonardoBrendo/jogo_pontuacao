@@ -1,6 +1,6 @@
 extends Area2D
 
-var direction: Vector2 
+var direction: Vector2
 var speed: int = 350
 var can_move: bool
 

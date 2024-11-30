@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://c0nhdyu6yyskr" path="res://kenvector_future_thin.ttf" id="1_6haqg"]
 [ext_resource type="Texture2D" uid="uid://dll8a6v04nojv" path="res://Player/Idle.png" id="2_hvm15"]
-[ext_resource type="Script" path="res://scenes/player.gd" id="2_pm1hh"]
+[ext_resource type="Script" path="res://Script/player.gd" id="2_pm1hh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42pf8"]
 size = Vector2(8, 14)
